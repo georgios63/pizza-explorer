@@ -14,7 +14,12 @@ export default function PizzaList() {
       </p>
       <p>TODO: the list of pizzas</p>
       {pizzaList.map((pizza) => (
-        <p key={pizza.id}>{pizza.name}</p>
+        <ul key={pizza.id}>
+          <li>{pizza.name}</li>
+          <li>{pizza.description}</li>
+          <li>{pizza.bought}</li>
+          <img src={pizza.image} alt="img" />
+        </ul>
       ))}
     </div>
   );
