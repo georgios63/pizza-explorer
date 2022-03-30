@@ -18,7 +18,6 @@ export default function PizzaList() {
           <li>{pizza.name}</li>
           <li>{pizza.description}</li>
           <li>{pizza.bought}</li>
-          <img src={pizza.image} alt="img" />
         </ul>
       ))}
     </div>

@@ -13,6 +13,9 @@
 // };
 
 export const getAllPizzas = (reduxState) => {
-  console.log(reduxState.pizzas.allPizzas);
-  return reduxState.pizzas.allPizzas;
+  const filteredPizza = [...reduxState.pizzas.allPizzas];
+
+  return filteredPizza.sort((a, b) => {
+    return b.bought - a.bought;
+  });
 };
